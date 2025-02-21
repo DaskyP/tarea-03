@@ -15,7 +15,7 @@ const Home = () => {
           Tic-Tac-Toe Tutorial
         </Link>
         <Link
-          to="/tic-tac-toe-ai"
+          to="/gatovspc"
           className="bg-rose-300 hover:bg-rose-400 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-all"
         >
           El gato y el ratón contra PC
