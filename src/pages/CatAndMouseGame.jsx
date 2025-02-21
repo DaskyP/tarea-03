@@ -18,7 +18,7 @@ const CatAndMouseGame = () => {
     <div className="flex flex-col items-center justify-center h-screen text-center relative">
       <ReturnButton />
       <h1 className="text-5xl font-extrabold text-pink-600 drop-shadow-lg mb-6">
-         Cat & Mouse vs PC 
+        El gato y el ratón vs PC
       </h1>
       <GameBoard setWinner={setWinner} reset={reset} setHasStarted={setHasStarted} />
 
