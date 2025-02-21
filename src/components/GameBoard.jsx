@@ -2,9 +2,18 @@
 import { useState, useEffect } from "react";
 import Square from "./Square";
 
-const GameBoard = ({ setWinner }) => {
+const GameBoard = ({ setWinner, reset, setHasStarted }) => {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [isCatTurn, setIsCatTurn] = useState(true);
+
+  useEffect(() => {
+    if (reset) {
+      setSquares(Array(9).fill(null));
+      setIsCatTurn(true);
+      setWinner(null);
+      setHasStarted(false);
+    }
+  }, [reset, setWinner, setHasStarted]);
 
   useEffect(() => {
     if (!isCatTurn) {
@@ -18,6 +27,7 @@ const GameBoard = ({ setWinner }) => {
     const newSquares = squares.slice();
     newSquares[i] = "🐱";
     setSquares(newSquares);
+    setHasStarted(true); 
 
     const winner = checkWinner(newSquares);
     if (winner) {
