@@ -68,7 +68,7 @@ export default function Game() {
   });
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gradient-to-br from-rose-100 to-pink-300">
+    <div className="flex items-center justify-center h-screen">
       <ReturnButton />
       <div className="flex bg-white p-6 rounded-2xl shadow-xl">
         <div className="mr-8">
